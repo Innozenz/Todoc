@@ -13,13 +13,13 @@ android {
     buildTypes {
         release {
             // Release app code minification:
-            useProguard false // <-- disable proguard
+            useProguard true // <-- enable proguard
             minifyEnabled true // <-- enable minification
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
             // Debug app code minification
-            useProguard false
+            useProguard true
             minifyEnabled true
         }
     }
