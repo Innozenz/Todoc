@@ -55,9 +55,9 @@ public class TaskDaoTest {
         database.close();
     }
 
-    private static Task NEW_ITEM_PLACE_TO_VISIT = new Task(PROJECT_ID, "test1", 1);
-    private static Task NEW_ITEM_IDEA = new Task(PROJECT_ID, "test2", 2);
-    private static Task NEW_ITEM_RESTAURANTS = new Task(PROJECT_ID, "test3", 3 );
+    private static Task NEW_TEST1 = new Task(PROJECT_ID, "test1", 1);
+    private static Task NEW_TEST2 = new Task(PROJECT_ID, "test2", 2);
+    private static Task NEW_TEST3 = new Task(PROJECT_ID, "test3", 3 );
 
     @Test
     public void getTasksWhenNoTaskInserted() throws InterruptedException {
@@ -71,9 +71,9 @@ public class TaskDaoTest {
         // BEFORE : Adding demo user & demo items
 
         this.database.projectDao().createProject(PROJECT_DEMO);
-        this.database.taskDao().insertTask(NEW_ITEM_PLACE_TO_VISIT);
-        this.database.taskDao().insertTask(NEW_ITEM_IDEA);
-        this.database.taskDao().insertTask(NEW_ITEM_RESTAURANTS);
+        this.database.taskDao().insertTask(NEW_TEST1);
+        this.database.taskDao().insertTask(NEW_TEST2);
+        this.database.taskDao().insertTask(NEW_TEST3);
 
         // TEST
         List<Task> tasks = LiveDataTestUtil.getValue(this.database.taskDao().getTasks());
@@ -84,7 +84,7 @@ public class TaskDaoTest {
     public void insertAndUpdateTask() throws InterruptedException {
         // BEFORE : Adding demo user & demo items. Next, update item added & re-save it
         this.database.projectDao().createProject(PROJECT_DEMO);
-        this.database.taskDao().insertTask(NEW_ITEM_PLACE_TO_VISIT);
+        this.database.taskDao().insertTask(NEW_TEST1);
         Task taskAdded = LiveDataTestUtil.getValue(this.database.taskDao().getTasks()).get(0);
         taskAdded.setSelected(true);
         this.database.taskDao().updateTask(taskAdded);
@@ -98,7 +98,7 @@ public class TaskDaoTest {
     public void insertAndDeleteTask() throws InterruptedException {
         // BEFORE : Adding demo task & demo project. Next, get the item added & delete it.
         this.database.projectDao().createProject(PROJECT_DEMO);
-        this.database.taskDao().insertTask(NEW_ITEM_PLACE_TO_VISIT);
+        this.database.taskDao().insertTask(NEW_TEST1);
         Task itemAdded = LiveDataTestUtil.getValue(this.database.taskDao().getTasks()).get(0);
         this.database.taskDao().deleteTask(itemAdded);
 

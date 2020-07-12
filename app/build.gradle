@@ -20,7 +20,7 @@ android {
         debug {
             // Debug app code minification
             useProguard true
-            minifyEnabled true
+            minifyEnabled false
         }
     }
     lintOptions {

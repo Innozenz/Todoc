@@ -18,8 +18,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.cleanup.todoc.DI.Injection;
-import com.cleanup.todoc.DI.ViewModelFactory;
+import com.cleanup.todoc.injection.Injection;
+import com.cleanup.todoc.injection.ViewModelFactory;
 import com.cleanup.todoc.R;
 import com.cleanup.todoc.model.Project;
 import com.cleanup.todoc.model.Task;
@@ -29,8 +29,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-
-import butterknife.OnClick;
 
 /**
  * <p>Home activity of the application which is displayed when the user opens the app.</p>
