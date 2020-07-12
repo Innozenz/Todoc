@@ -68,7 +68,7 @@ public class TaskDaoTest {
 
     @Test
     public void insertAndGetTasks() throws InterruptedException {
-        // BEFORE : Adding demo user & demo items
+        // BEFORE : Adding demo project & demo task
 
         this.database.projectDao().createProject(PROJECT_DEMO);
         this.database.taskDao().insertTask(NEW_TEST1);
@@ -82,7 +82,7 @@ public class TaskDaoTest {
 
     @Test
     public void insertAndUpdateTask() throws InterruptedException {
-        // BEFORE : Adding demo user & demo items. Next, update item added & re-save it
+        // BEFORE : Adding demo project & demo task. Next, update task added & re-save it
         this.database.projectDao().createProject(PROJECT_DEMO);
         this.database.taskDao().insertTask(NEW_TEST1);
         Task taskAdded = LiveDataTestUtil.getValue(this.database.taskDao().getTasks()).get(0);

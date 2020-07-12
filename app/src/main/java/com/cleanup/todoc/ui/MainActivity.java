@@ -23,7 +23,6 @@ import com.cleanup.todoc.injection.ViewModelFactory;
 import com.cleanup.todoc.R;
 import com.cleanup.todoc.model.Project;
 import com.cleanup.todoc.model.Task;
-import com.cleanup.todoc.repositories.TaskViewModel;
 
 import java.util.ArrayList;
 import java.util.Collections;

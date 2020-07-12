@@ -5,7 +5,7 @@ import android.arch.lifecycle.ViewModelProvider;
 
 import com.cleanup.todoc.repositories.ProjectDataRepository;
 import com.cleanup.todoc.repositories.TaskDataRepository;
-import com.cleanup.todoc.repositories.TaskViewModel;
+import com.cleanup.todoc.ui.TaskViewModel;
 
 import java.util.concurrent.Executor;
 
