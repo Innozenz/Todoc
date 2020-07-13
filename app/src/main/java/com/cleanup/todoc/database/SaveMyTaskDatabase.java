@@ -31,7 +31,7 @@ public abstract class SaveMyTaskDatabase extends RoomDatabase {
             synchronized (SaveMyTaskDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            SaveMyTaskDatabase.class, "MyDatabase7.db")
+                            SaveMyTaskDatabase.class, "MyDatabase.db")
                             .addCallback(prepopulateDatabase())
                             .build();
                 }
